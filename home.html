@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBay</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/gautham-20/project/6abeee52a810e01e2f33fdc57e79607591e3987e/online-shopping%20(1).png" type="image/icon type">
+    <style>
+        body {
+            background-image: url("https://github.com/gautham-20/project/blob/main/bg.jpg?raw=true");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #000000;
+            margin-bottom: 250px;
+            border-radius: 20px;
+            padding: 20px;
+            opacity:75%;
+            
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .lb,
+        .rb {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .lb {
+            background-color: #4CAF50;
+        }
+
+        .rb {
+            background-color: #008CBA;
+        }
+
+        .lb:hover {
+            background-color: #df16c4;
+        }
+
+        .rb:hover {
+            background-color: #df16c4;
+        }
+
+        .lb::before {
+            content: '🔒';
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .rb::before {
+            content: '📝';
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        img {
+            width: 400px;
+        }
+
+        .container:hover{
+            background:none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 50px;
+                padding: 15px;
+            }
+
+            img {
+                width: 300px;
+            }
+
+            .lb, .rb {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin-top: 20px;
+                padding: 10px;
+            }
+
+            img {
+                width: 200px;
+            }
+
+            .lb, .rb {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><img src="https://raw.githubusercontent.com/gautham-20/project/bb585c8219104014c5ca047a7634ab035a135dc3/ebay-6-8-2024.png?token=BJBH7I5LWZVJA55GHHJYHNLGMR46S"></h1>
+      <div class="buttons">
+        <a href="login.html" class="lb">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="register.html" class="rb">Register</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            background-image: url("https://github.com/gautham-20/project/blob/main/bg.jpg?raw=true");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: "Noto Sans", system-ui;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .lc {
+            background-color: #000000;
+            margin-top: 250px;
+            opacity: 80%;
+            border-radius: 5px;
+            padding: 40px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 550px;
+        }
+
+        .lc h2 {
+            text-align: justify;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .lf .fg {
+            margin-bottom: 20px;
+        }
+
+        .lf label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+
+        .lf input[type="text"],
+        .lf input[type="password"],
+        .lf input[type="number"],
+        .lf input[type="email"],
+        .lf input[type="tel"],
+        .lf textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .lf button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lf button:hover {
+            background-color: #11b427;
+        }
+
+        .lc img {
+            width: 250px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        @media (max-width: 768px) {
+            .lc {
+                margin-top: 100px;
+                padding: 30px;
+                width: 90%;
+            }
+
+            .lc img {
+                width: 200px;
+            }
+
+            .lf input[type="text"],
+            .lf input[type="password"],
+            .lf input[type="number"],
+            .lf input[type="email"],
+            .lf input[type="tel"],
+            .lf textarea {
+                padding: 8px;
+            }
+
+            .lf button {
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .lc {
+                margin-top: 50px;
+                padding: 20px;
+                width: 90%;
+            }
+
+            .lc img {
+                width: 150px;
+            }
+
+            .lf input[type="text"],
+            .lf input[type="password"],
+            .lf input[type="number"],
+            .lf input[type="email"],
+            .lf input[type="tel"],
+            .lf textarea {
+                padding: 6px;
+            }
+
+            .lf button {
+                padding: 6px;
+            }
+        }
+
+        .iti {
+            width: 100%;
+        }
+
+        .iti__country-list {
+            background-color: #fff;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="lc">
+      <img
+        src="https://raw.githubusercontent.com/gautham-20/project/bb585c8219104014c5ca047a7634ab035a135dc3/ebay-6-8-2024.png?token=BJBH7I5LWZVJA55GHHJYHNLGMR46S"
+        alt="Logo">
+      <form class="lf" action="/register" method="post">
+        <div class="fg">
+          <label for="fn">First name</label>
+          <input type="text" id="fn" name="fn"
+            placeholder="Enter your first name" required>
+        </div>
+        <div class="fg">
+          <label for="ln">Last name</label>
+          <input type="text" id="ln" name="ln"
+            placeholder="Enter your last name" required>
+        </div>
+        <div class="fg">
+          <label for="mi">Mail</label>
+          <input type="email" id="mi" name="mi" placeholder="Enter your mail-id"
+            required>
+        </div>
+        <div class="fg">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username"
+            placeholder="Enter your username" required>
+        </div>
+        <div class="fg">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password"
+            placeholder="Enter your password" required>
+        </div>
+        <div class="fg">
+          <label for="cp">Confirm Password</label>
+          <input type="password" id="cp" name="cp"
+            placeholder="Confirm your password" required>
+        </div>
+        <div class="fg">
+          <label for="num">Mobile Number</label>
+          <input type="tel" id="mobile_code" name="num"
+            placeholder="Enter your mobile number" required>
+        </div>
+        <div class="fg">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" placeholder="Enter your Address"
+            rows="6" required></textarea>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+        const input = document.querySelector("#mobile_code");
+        intlTelInput(input, {
+            initialCountry: "in",
+            separateDialCode: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+    </script>
+  </body>
+</html>
