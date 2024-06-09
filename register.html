@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="icon"
+      href="https://raw.githubusercontent.com/gautham-20/project/6abeee52a810e01e2f33fdc57e79607591e3987e/online-shopping%20(1).png"
+      type="image/icon type">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
     <style>
@@ -136,6 +139,7 @@
             .lf input[type="tel"],
             .lf textarea {
                 padding: 6px;
+                width:80%;
             }
 
             .lf button {
@@ -150,50 +154,43 @@
         .iti__country-list {
             background-color: #fff;
         }
+        
+        #ii1{
+          margin-top:30px;
+        }
     </style>
   </head>
   <body>
     <div class="lc">
       <img
         src="https://raw.githubusercontent.com/gautham-20/project/bb585c8219104014c5ca047a7634ab035a135dc3/ebay-6-8-2024.png?token=BJBH7I5LWZVJA55GHHJYHNLGMR46S"
-        alt="Logo">
+        alt="Logo" id="ii1">
       <form class="lf" action="/register" method="post">
         <div class="fg">
           <label for="fn">First name</label>
           <input type="text" id="fn" name="fn"
             placeholder="Enter your first name" required>
-        </div>
-        <div class="fg">
+          <br> <br>
           <label for="ln">Last name</label>
           <input type="text" id="ln" name="ln"
             placeholder="Enter your last name" required>
-        </div>
-        <div class="fg">
+          <br> <br>
           <label for="mi">Mail</label>
           <input type="email" id="mi" name="mi" placeholder="Enter your mail-id"
             required>
-        </div>
-        <div class="fg">
+          <br> <br>
           <label for="username">Username</label>
           <input type="text" id="username" name="username"
             placeholder="Enter your username" required>
-        </div>
-        <div class="fg">
+          <br> <br>
           <label for="password">Password</label>
           <input type="password" id="password" name="password"
             placeholder="Enter your password" required>
-        </div>
-        <div class="fg">
-          <label for="cp">Confirm Password</label>
-          <input type="password" id="cp" name="cp"
-            placeholder="Confirm your password" required>
-        </div>
-        <div class="fg">
+          <br> <br>
           <label for="num">Mobile Number</label>
           <input type="tel" id="mobile_code" name="num"
             placeholder="Enter your mobile number" required>
-        </div>
-        <div class="fg">
+          <br> <br>
           <label for="address">Address</label>
           <textarea id="address" name="address" placeholder="Enter your Address"
             rows="6" required></textarea>
