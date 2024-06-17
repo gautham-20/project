@@ -1,213 +1,900 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="icon"
-      href="https://raw.githubusercontent.com/gautham-20/project/6abeee52a810e01e2f33fdc57e79607591e3987e/online-shopping%20(1).png"
-      type="image/icon type">
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-        body {
-            background-image: url("https://github.com/gautham-20/project/blob/main/bg.jpg?raw=true");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: "Noto Sans", system-ui;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronics, Cars, Fashion, Gadgets & More | eBay</title>
+  <link rel="icon"
+    href="https://raw.githubusercontent.com/gautham-20/project/6abeee52a810e01e2f33fdc57e79607591e3987e/online-shopping%20(1).png"
+    type="image/icon type">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-        .lc {
-            background-color: #000000;
-            margin-top: 250px;
-            opacity: 80%;
-            border-radius: 5px;
-            padding: 40px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 550px;
-        }
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-        .lc h2 {
-            text-align: justify;
-            margin-bottom: 20px;
-            color: #fff;
-        }
+    body {
+      background-color: rgba(255, 255, 255, 0.623);
+    }
 
-        .lf .fg {
-            margin-bottom: 20px;
-        }
+    .scrolling-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
 
-        .lf label {
-            display: block;
-            margin-bottom: 5px;
-            color: #ccc;
-        }
+    .scrolling-wrapper::-webkit-scrollbar {
+      display: none;
+    }
 
-        .lf input[type="text"],
-        .lf input[type="password"],
-        .lf input[type="number"],
-        .lf input[type="email"],
-        .lf input[type="tel"],
-        .lf textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
+    .card {
+      min-width: 200px;
+      margin-right: 15px;
+    }
 
-        .lf button {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    #i1 {
+      width: 100px;
+    }
 
-        .lf button:hover {
-            background-color: #11b427;
-        }
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: aliceblue;
+      color: black;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      border-radius: 5px;
+      z-index: 10;
+      opacity: 75%;
+    }
 
-        .lc img {
-            width: 250px;
-            display: block;
-            margin: 0 auto 20px;
-        }
+    #scroll-left {
+      left: 10px;
+    }
 
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
+    #scroll-right {
+      right: 10px;
+    }
 
-        input[type=number] {
-            -moz-appearance: textfield;
-        }
+    #scroll-left:hover,
+    #scroll-right:hover {
+      background-color: none;
 
-        @media (max-width: 768px) {
-            .lc {
-                margin-top: 100px;
-                padding: 30px;
-                width: 90%;
-            }
+    }
 
-            .lc img {
-                width: 200px;
-            }
+    .pr {
+      display: flex;
+      margin-left: 10px;
+    }
 
-            .lf input[type="text"],
-            .lf input[type="password"],
-            .lf input[type="number"],
-            .lf input[type="email"],
-            .lf input[type="tel"],
-            .lf textarea {
-                padding: 8px;
-            }
+    .pr img {
+      width: 200px;
+      height: 230px;
+      padding: 10px;
+    }
 
-            .lf button {
-                padding: 8px;
-            }
-        }
+    .pr1 {
+      display: flex;
+      margin-left: 50px;
+    }
 
-        @media (max-width: 480px) {
-            .lc {
-                margin-top: 50px;
-                padding: 20px;
-                width: 90%;
-            }
+    .pr1 img {
+      width: 200px;
+      height: 230px;
+      padding: 10px;
+    }
 
-            .lc img {
-                width: 150px;
-            }
+    .m marquee {
+      padding: 20px;
+      margin-left: 600px;
+    }
 
-            .lf input[type="text"],
-            .lf input[type="password"],
-            .lf input[type="number"],
-            .lf input[type="email"],
-            .lf input[type="tel"],
-            .lf textarea {
-                padding: 6px;
-                width:80%;
-            }
+    #l1 {
+      width: 20px;
+      height: 20px;
+      margin-left: 20px;
+      margin-top: -5px;
+    }
 
-            .lf button {
-                padding: 6px;
-            }
-        }
+    #im1,
+    #im2,
+    #im3,
+    #im4 {
+      height: 320px;
+    }
 
-        .iti {
-            width: 100%;
-        }
 
-        .iti__country-list {
-            background-color: #fff;
-        }
-        
-        #ii1{
-          margin-top:30px;
-        }
-    </style>
-  </head>
-  <body>
-    <div class="lc">
-      <img
-        src="https://raw.githubusercontent.com/gautham-20/project/bb585c8219104014c5ca047a7634ab035a135dc3/ebay-6-8-2024.png?token=BJBH7I5LWZVJA55GHHJYHNLGMR46S"
-        alt="Logo" id="ii1">
-      <form class="lf" action="/register" method="post">
-        <div class="fg">
-          <label for="fn">First name</label>
-          <input type="text" id="fn" name="fn"
-            placeholder="Enter your first name" required>
-          <br> <br>
-          <label for="ln">Last name</label>
-          <input type="text" id="ln" name="ln"
-            placeholder="Enter your last name" required>
-          <br> <br>
-          <label for="mi">Mail</label>
-          <input type="email" id="mi" name="mi" placeholder="Enter your mail-id"
-            required>
-          <br> <br>
-          <label for="username">Username</label>
-          <input type="text" id="username" name="username"
-            placeholder="Enter your username" required>
-          <br> <br>
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password"
-            placeholder="Enter your password" required>
-          <br> <br>
-          <label for="num">Mobile Number</label>
-          <input type="tel" id="mobile_code" name="num"
-            placeholder="Enter your mobile number" required>
-          <br> <br>
-          <label for="address">Address</label>
-          <textarea id="address" name="address" placeholder="Enter your Address"
-            rows="6" required></textarea>
-        </div>
-        <button type="submit">Register</button>
-      </form>
+
+    .scroll-container {
+      width: 1200px;
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+
+    .item {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .ha {
+      font-family: "Jacquard 12", system-ui;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .con {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      width: 1200%;
+    }
+
+    .ib {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .ib::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ib img {
+      width:250px;
+      height:350px;
+      margin-right: 10px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .sb {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+
+    .sb:focus {
+      outline: none;
+    }
+
+    .ab,.ac,.ad{
+      width:500px;
+     
+    }
+    .ab h6,.ac h6,.ad h6{
+      color: #333;
+    }
+
+    .ab img,.ac img,.ad img{
+      padding:10px;
+      width:140px;
+      height:171px;
+      border-style:solid;
+      border-color: rgba(0, 0, 0, 0.425);
+      
+    }
+    
+    .aa{
+      display: flex;
+    }
+
+    .ab img:hover,.ac img:hover,.ad img:hover{
+      padding:10px;
+      width:150px;
+      height:181px;
+    }
+
+    b{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.b container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.b section {
+    margin-bottom: 20px;
+}
+
+.b h2 {
+    color: #333;
+}
+
+.b p {
+    color: #555;
+}
+
+.b form {
+    display: flex;
+    flex-direction: column;
+}
+
+.b label {
+    margin-top: 10px;
+}
+
+.b input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.b button {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.b a{
+  text-decoration:none;
+}
+
+.b button:hover {
+    background-color: #37f108;
+}
+
+.cc{
+    text-align: center;
+    padding: 10px;
+    background-color: #b6b2b286;
+    color: #fff;
+    width: 100%;
+    bottom: 0;
+    text-decoration: none;
+}
+    
+
+  </style>
+</head>
+
+<body>
+  <header class="container-fluid py-3 bg-dark">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <a href="/profile"><img id="i1"
+            src="https://raw.githubusercontent.com/gautham-20/project/bb585c8219104014c5ca047a7634ab035a135dc3/ebay-6-8-2024.png?token=BJBH7I5LWZVJA55GHHJYHNLGMR46S"></a>
+      </div>
+      <div class="col-md-6 d-flex justify-content-end">
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a class="nav-link" href="#">Today's
+              Deals</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Wishlist</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Your Orders</a></li>
+          <li class="nav-item"><a class="nav-link" href="/yp">Profile</a></li>
+        </ul>
+      </div>
     </div>
+  </header>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    <script>
-        const input = document.querySelector("#mobile_code");
-        intlTelInput(input, {
-            initialCountry: "in",
-            separateDialCode: true,
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+  <nav class="container-fluid sticky-top bg-white">
+    <div class="row align-items-center py-2">
+      <div class="col-6 col-md-3">
+        <a class="navbar-brand"><img src="https://github.com/gautham-20/project/blob/main/l.png?raw=true"
+            id="l1">Deliver to</a>
+        <div>
+          <label for="country">
+            <select id="country" name="country" class="form-control">
+              <option value selected>Choose your Location</option>
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Åland Islands">Åland Islands</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="American Samoa">American Samoa</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Anguilla">Anguilla</option>
+              <option value="Antarctica">Antarctica</option>
+              <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Armenia">Armenia</option>
+              <option value="Aruba">Aruba</option>
+              <option value="Australia">Australia</option>
+              <option value="Austria">Austria</option>
+              <option value="Azerbaijan">Azerbaijan</option>
+              <option value="Bahamas">Bahamas</option>
+              <option value="Bahrain">Bahrain</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Barbados">Barbados</option>
+              <option value="Belarus">Belarus</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Belize">Belize</option>
+              <option value="Benin">Benin</option>
+              <option value="Bermuda">Bermuda</option>
+              <option value="Bhutan">Bhutan</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+              <option value="Botswana">Botswana</option>
+              <option value="Bouvet Island">Bouvet Island</option>
+              <option value="Brazil">Brazil</option>
+              <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+              <option value="Brunei Darussalam">Brunei Darussalam</option>
+              <option value="Bulgaria">Bulgaria</option>
+              <option value="Burkina Faso">Burkina Faso</option>
+              <option value="Burundi">Burundi</option>
+              <option value="Cambodia">Cambodia</option>
+              <option value="Cameroon">Cameroon</option>
+              <option value="Canada">Canada</option>
+              <option value="Cape Verde">Cape Verde</option>
+              <option value="Cayman Islands">Cayman Islands</option>
+              <option value="Central African Republic">Central African Republic</option>
+              <option value="Chad">Chad</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Christmas Island">Christmas Island</option>
+              <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Comoros">Comoros</option>
+              <option value="Congo">Congo</option>
+              <option value="Congo, The Democratic Republic of The">The Democratic Republic of the Congo</option>
+              <option value="Cook Islands">Cook Islands</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Cote D'ivoire">Cote D'Ivoire</option>
+              <option value="Croatia">Croatia</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Cyprus">Cyprus</option>
+              <option value="Czech Republic">Czech Republic</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Djibouti">Djibouti</option>
+              <option value="Dominica">Dominica</option>
+              <option value="Dominican Republic">Dominican Republic</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Egypt">Egypt</option>
+              <option value="El Salvador">El Salvador</option>
+              <option value="Equatorial Guinea">Equatorial Guinea</option>
+              <option value="Eritrea">Eritrea</option>
+              <option value="Estonia">Estonia</option>
+              <option value="Ethiopia">Ethiopia</option>
+              <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+              <option value="Faroe Islands">Faroe Islands</option>
+              <option value="Fiji">Fiji</option>
+              <option value="Finland">Finland</option>
+              <option value="France">France</option>
+              <option value="French Guiana">French Guiana</option>
+              <option value="French Polynesia">French Polynesia</option>
+              <option value="French Southern Territories">French Southern Territories</option>
+              <option value="Gabon">Gabon</option>
+              <option value="Gambia">Gambia</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Germany">Germany</option>
+              <option value="Ghana">Ghana</option>
+              <option value="Gibraltar">Gibraltar</option>
+              <option value="Greece">Greece</option>
+              <option value="Greenland">Greenland</option>
+              <option value="Grenada">Grenada</option>
+              <option value="Guadeloupe">Guadeloupe</option>
+              <option value="Guam">Guam</option>
+              <option value="Guatemala">Guatemala</option>
+              <option value="Guernsey">Guernsey</option>
+              <option value="Guinea">Guinea</option>
+              <option value="Guinea-Bissau">Guinea-Bissau</option>
+              <option value="Guyana">Guyana</option>
+              <option value="Haiti">Haiti</option>
+              <option value="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+              <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+              <option value="Honduras">Honduras</option>
+              <option value="Hong Kong">Hong Kong</option>
+              <option value="Hungary">Hungary</option>
+              <option value="Iceland">Iceland</option>
+              <option value="India">India</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="Iran, Islamic Republic of">Islamic Republic of Iran</option>
+              <option value="Iraq">Iraq</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Isle of Man">Isle of Man</option>
+              <option value="Israel">Israel</option>
+              <option value="Italy">Italy</option>
+              <option value="Jamaica">Jamaica</option>
+              <option value="Japan">Japan</option>
+              <option value="Jersey">Jersey</option>
+              <option value="Jordan">Jordan</option>
+              <option value="Kazakhstan">Kazakhstan</option>
+              <option value="Kenya">Kenya</option>
+              <option value="Kiribati">Kiribati</option>
+              <option value="Korea, Democratic People's Republic of">Democratic People's Republic of Korea</option>
+              <option value="Korea, Republic of">Korea, Republic of</option>
+              <option value="Kuwait">Kuwait</option>
+              <option value="Kyrgyzstan">Kyrgyzstan</option>
+              <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+              <option value="Latvia">Latvia</option>
+              <option value="Lebanon">Lebanon</option>
+              <option value="Lesotho">Lesotho</option>
+              <option value="Liberia">Liberia</option>
+              <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+              <option value="Liechtenstein">Liechtenstein</option>
+              <option value="Lithuania">Lithuania</option>
+              <option value="Luxembourg">Luxembourg</option>
+              <option value="Macao">Macao</option>
+              <option value="Macedonia">Macedonia</option>
+              <option value="Madagascar">Madagascar</option>
+              <option value="Malawi">Malawi</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Maldives">Maldives</option>
+              <option value="Mali">Mali</option>
+              <option value="Malta">Malta</option>
+              <option value="Marshall Islands">Marshall Islands</option>
+              <option value="Martinique">Martinique</option>
+              <option value="Mauritania">Mauritania</option>
+              <option value="Mauritius">Mauritius</option>
+              <option value="Mayotte">Mayotte</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+              <option value="Moldova, Republic of">Republic of Moldova</option>
+              <option value="Monaco">Monaco</option>
+              <option value="Mongolia">Mongolia</option>
+              <option value="Montenegro">Montenegro</option>
+              <option value="Montserrat">Montserrat</option>
+              <option value="Morocco">Morocco</option>
+              <option value="Mozambique">Mozambique</option>
+              <option value="Myanmar">Myanmar</option>
+              <option value="Namibia">Namibia</option>
+              <option value="Nauru">Nauru</option>
+              <option value="Nepal">Nepal</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="Netherlands Antilles">Netherlands Antilles</option>
+              <option value="New Caledonia">New Caledonia</option>
+              <option value="New Zealand">New Zealand</option>
+              <option value="Nicaragua">Nicaragua</option>
+              <option value="Niger">Niger</option>
+              <option value="Nigeria">Nigeria</option>
+              <option value="Niue">Niue</option>
+              <option value="Norfolk Island">Norfolk Island</option>
+              <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+              <option value="Norway">Norway</option>
+              <option value="Oman">Oman</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Palau">Palau</option>
+              <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+              <option value="Panama">Panama</option>
+              <option value="Papua New Guinea">Papua New Guinea</option>
+              <option value="Paraguay">Paraguay</option>
+              <option value="Peru">Peru</option>
+              <option value="Philippines">Philippines</option>
+              <option value="Pitcairn">Pitcairn</option>
+              <option value="Poland">Poland</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Puerto Rico">Puerto Rico</option>
+              <option value="Qatar">Qatar</option>
+              <option value="Reunion">Reunion</option>
+              <option value="Romania">Romania</option>
+              <option value="Russian Federation">Russian Federation</option>
+              <option value="Rwanda">Rwanda</option>
+              <option value="Saint Barthelemy">Saint Barthelemy</option>
+              <option value="Saint Helena">Saint Helena</option>
+              <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+              <option value="Saint Lucia">Saint Lucia</option>
+              <option value="Saint Martin">Saint Martin</option>
+              <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+              <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+              <option value="Samoa">Samoa</option>
+              <option value="San Marino">San Marino</option>
+              <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+              <option value="Saudi Arabia">Saudi Arabia</option>
+              <option value="Senegal">Senegal</option>
+              <option value="Serbia">Serbia</option>
+              <option value="Seychelles">Seychelles</option>
+              <option value="Sierra Leone">Sierra Leone</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Slovakia">Slovakia</option>
+              <option value="Slovenia">Slovenia</option>
+              <option value="Solomon Islands">Solomon Islands</option>
+              <option value="Somalia">Somalia</option>
+              <option value="South Africa">South Africa</option>
+              <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands
+              </option>
+              <option value="South Sudan">South Sudan</option>
+              <option value="Spain">Spain</option>
+              <option value="Sri Lanka">Sri Lanka</option>
+              <option value="Sudan">Sudan</option>
+              <option value="Suriname">Suriname</option>
+              <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+              <option value="Swaziland">Swaziland</option>
+              <option value="Sweden">Sweden</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+              <option value="Taiwan, Province of China">Taiwan</option>
+              <option value="Tajikistan">Tajikistan</option>
+              <option value="Tanzania, United Republic of">United Republic of Tanzania</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Timor-leste">Timor-Leste</option>
+              <option value="Togo">Togo</option>
+              <option value="Tokelau">Tokelau</option>
+              <option value="Tonga">Tonga</option>
+              <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+              <option value="Tunisia">Tunisia</option>
+              <option value="Turkey">Turkey</option>
+              <option value="Turkmenistan">Turkmenistan</option>
+              <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+              <option value="Tuvalu">Tuvalu</option>
+              <option value="Uganda">Uganda</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="United Arab Emirates">United Arab Emirates</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+              <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="Uzbekistan">Uzbekistan</option>
+              <option value="Vanuatu">Vanuatu</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Viet Nam">Viet Nam</option>
+              <option value="Virgin Islands, British">Virgin Islands, British</option>
+              <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+              <option value="Wallis and Futuna">Wallis and Futuna</option>
+              <option value="Western Sahara">Western Sahara</option>
+              <option value="Yemen">Yemen</option>
+              <option value="Zambia">Zambia</option>
+              <option value="Zimbabwe">Zimbabwe</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="col-6 col-md-6 d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+      </div>
+      <div class="col-md-3 d-none d-md-flex justify-content-end">
+        <ul class="nav nav-pills">
+          <!-- <li class="nav-item"><a class="nav-link" href="#">All
+                  category</a></li> -->
+
+          <div class="col-md-3 d-none d-md-flex justify-content-end">
+            <ul class="nav nav-pills">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  All categories
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                  <li><a class="dropdown-item" href="#">Toys</a></li>
+                  <li><a class="dropdown-item" href="#">Cars & Motorbikes</a></li>
+                  <li><a class="dropdown-item" href="#">Clothes</a></li>
+                  <li><a class="dropdown-item" href="#">Electronics</a></li>
+                  <li><a class="dropdown-item" href="#">Books, Comics</a></li>
+                  <li><a class="dropdown-item" href="#">Home Appliances</a></li>
+                  <li><a class="dropdown-item" href="#">Sports Equipment</a></li>
+                  <li><a class="dropdown-item" href="#">Furniture</a></li>
+                  <li><a class="dropdown-item" href="#">Mobile & Accessories</a></li>
+                  <li><a class="dropdown-item" href="#">Groceries</a></li>
+                  <li><a class="dropdown-item" href="#">Beauty Products</a></li>
+                  <li><a class="dropdown-item" href="#">Jewelry</a></li>
+                  <li><a class="dropdown-item" href="#">Shoes, Handbags</a></li>
+                  <li><a class="dropdown-item" href="#">Softwares, Movies(Blu-ray)</a></li>
+                  <li><a class="dropdown-item" href="#">Watches</a></li>
+                  <li><a class="dropdown-item" href="#">Computer & Accessories</a></li>
+
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </div>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+
+
+  <div class="container mt-4 position-relative bg-light">
+
+    <button id="scroll-left" class="scroll-btn">&lt;</button>
+    <div class="scrolling-wrapper">
+
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/711iEp9ysrL._SX679_.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Casio</h5>
+          <p class="card-text">Casio Edifice Chronograph Black Dial Men's Watch EFR-556DC-1AVUDF(EX493) Stainless Steel,
+            Black Strap<br><Strong>₹12,995</Strong></p>
+          <a href="/pur" class="btn btn-primary">Buy</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/51V4cwzsS1L._SX679_.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Casio</h5>
+          <p class="card-text">Casio Men's G-Shock Black Dial Digital Watch - DW-5600BB-1DR, G363
+            <br><strong>₹4,756</strong><br><br><br><br>
+          </p>
+          <a href="/pur" class="btn btn-primary">Buy</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/81vxWpPpgNL._SX679_.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Samsung Galaxy S24 Ultra</h5>
+          <p class="card-text">Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Gray, 12GB, 1TB
+            Storage)<br><strong>₹1,59,999</strong><br><br></p>
+          </p>
+          <a href="/pur" class="btn btn-primary">Buy</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/81CgtwSII3L._SX679_.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Apple iPhone 15 Pro Max</h5>
+          <p class="card-text">Apple iPhone 15 Pro (1 TB) - Natural
+            Titanium<br><strong>₹1,77,900</strong><br><br><br><br><br></p>
+          <a href="/pur" class="btn btn-primary">Buy</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/41XLMeH3hIL._SX300_SY300_QL70_FMwebp_.jpg" class="card-img-top"
+          alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Intel</h5>
+          <p class="card-text">Intel Core I9-14900K LGA 1700 New Gaming Desktop Processor 24 Cores (8 P-Cores + 16
+            E-Cores) with Integrated Graphics - Unlocked<br>
+            <strong>₹63,000</strong><br>
+          </p>
+          <a href="/pur" class="btn btn-primary">Buy</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/816hhOe0gVL._SX679_.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">MSI Geforce RTX 4090</h5>
+          <p class="card-text">MSI Geforce RTX 4090 Suprim X 24G Graphic Card I Nvidia Geforce RTX 4090 Gpu|24 Gb Gddr6X
+            384-Bit Memory<br><strong>₹2,33,619</strong></p>
+          <a href="/pur" class="btn btn-primary">Buy</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/710zVnlJBnL._SX679_.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">LG Monitor</h5>
+          <p class="card-text">LG 48Gq900-B 48" Ultragear Uhd Oled Gaming Monitor With Anti-Glare, 1.5M : 1 Contrast
+            Ratio & Dci-P3 99% (Typ.) With Hdr 10, 1Ms (Gtg) 120Hz Refresh Rate, Hdmi 2.1,
+            Black<br><br><strong>₹1,55,000</strong></p>
+          <a href="/pur" class="btn btn-primary">Buy</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/81MRU+3RJLL._SX425_.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Sony TV</h5>
+          <p class="card-text">Sony Bravia 164 cm (65 inches) 4K Ultra HD Smart LED Google TV KD-65X74L (Black)
+            <br><strong>₹77,990</strong><br><br><br><br><br><br><br>
+          </p>
+          <a href="/pur" class="btn btn-primary">Buy</a>
+        </div>
+      </div>
+
+
+    </div>
+    <button id="scroll-right" class="scroll-btn">&gt;</button>
+  </div>
+
+  <div class="m">
+    <marquee behavior="slide" direction="up" width="250px">OFFERS CLOSES
+      SOON</marquee>
+  </div>
+
+  <div class="pr">
+    <a href="#"><img src="https://m.media-amazon.com/images/I/91C9BtYCoOL._AC_SY200_.jpg"></a>
+    <a href="#"><img src="https://m.media-amazon.com/images/I/41mzttG8NfL._AC_SY200_.jpg"></a>
+    <a href="#"><img src="https://m.media-amazon.com/images/I/71eQ7g6AlfL._AC_SY200_.jpg"></a>
+    <a href="#"><img src="https://m.media-amazon.com/images/I/71zZz5AX8CL._AC_SY200_.jpg"></a>
+    <a href="#"><img src="https://m.media-amazon.com/images/I/71kkAYDCGBL._AC_SY200_.jpg"></a>
+
+  </div>
+  </div>
+
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://github.com/gautham-20/project/blob/main/1.jpg?raw=true" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://github.com/gautham-20/project/blob/main/2.jpg?raw=true" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://github.com/gautham-20/project/blob/main/3.jpg?raw=true" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://github.com/gautham-20/project/blob/main/4.jpg?raw=true" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://github.com/gautham-20/project/blob/main/5.jpg?raw=true" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </div>
+
+  <br><br>
+  <div class="container">
+    <h2>Best Sellers in Beauty</h2>
+    <div class="scroll-container">
+      <div class="item">
+        <img src="https://m.media-amazon.com/images/I/61wHkCENFtL._AC_SY200_.jpg"
+          alt="Wow Simple LOREAL FACE ICE ROLLER">
+        <img src="https://m.media-amazon.com/images/I/71eJAaD6aBL._AC_SY200_.jpg"
+          alt="Wow Simple LOREAL FACE ICE ROLLER">
+        <img src="https://m.media-amazon.com/images/I/51tXjE2WQQL._AC_SY200_.jpg"
+          alt="Wow Simple LOREAL FACE ICE ROLLER">
+        <img src="https://m.media-amazon.com/images/I/51tj3Znd0JL._AC_SY200_.jpg"
+          alt="Wow Simple LOREAL FACE ICE ROLLER">
+        <img src="https://m.media-amazon.com/images/I/61qZXVuSB9L._AC_SY200_.jpg"
+          alt="Wow Simple LOREAL FACE ICE ROLLER">
+        <img src="https://m.media-amazon.com/images/I/61ClJoc2JiL._AC_SY200_.jpg"
+          alt="Wow Simple LOREAL FACE ICE ROLLER">
+        <img src="https://m.media-amazon.com/images/I/419w4PBH11L._AC_SY200_.jpg"
+          alt="Wow Simple LOREAL FACE ICE ROLLER">
+      </div>
+    </div>
+  </div>
+
+  <div class="ha">
+
+    <div class="con">
+      <button class="sb left" id="scrollLeft">⟨</button>
+      <div class="ib" id="iB">
+
+        <a href="#"><img src="https://m.media-amazon.com/images/I/41xSMmPE2eL._SY300_SX300_QL70_FMwebp_.jpg"></a>
+        <a href="#"><img src="https://m.media-amazon.com/images/I/51n+OG3t0VL._AC_SY200_.jpg"></a>
+        <a href="#"><img src="https://m.media-amazon.com/images/I/41CNYCZRB0L._SX300_SY300_QL70_FMwebp_.jpg"></a>
+        <a href="#"><img src="https://m.media-amazon.com/images/I/41CNYCZRB0L._SX300_SY300_QL70_FMwebp_.jpg"></a>
+        <a href="#"><img src="https://m.media-amazon.com/images/I/41CNYCZRB0L._SX300_SY300_QL70_FMwebp_.jpg"></a>
+        <a href="#"><img src="https://m.media-amazon.com/images/I/41CNYCZRB0L._SX300_SY300_QL70_FMwebp_.jpg"></a>
+        <a href="#"><img src="https://m.media-amazon.com/images/I/41CNYCZRB0L._SX300_SY300_QL70_FMwebp_.jpg"></a>
+      </div>
+      <button class="sb right" id="scrollRight">⟩</button>
+    </div>
+  </div>
+<div class="aa">
+<div class="ab">
+  <h6>Best Sellers in Sports, Fitness & Outdoors</h6>
+  <a href="#"><img src="https://m.media-amazon.com/images/I/81feGML0NAL._AC_SY170_.jpg"></a>
+  <a href="#"><img src="https://m.media-amazon.com/images/I/615p+mDN4+L._AC_SY170_.jpg"></a><br><br>
+  <a href="#"><img src="https://m.media-amazon.com/images/I/51+b9IWWbjL._AC_SY170_.jpg"></a>
+  <a href="#"><img src="https://m.media-amazon.com/images/I/61Mg9eVK0HL._AC_SY170_.jpg"></a>
+</div>
+
+<div class="ac">
+  <h6>Fashionable and trendy clothes</h6>
+  <a href="#"><img src="https://m.media-amazon.com/images/I/616iBhe2roL._AC_SY145_.jpg"></a>
+  <a href="#"><img src="https://m.media-amazon.com/images/I/71eUwDk8z+L._AC_SY145_.jpg"></a><br><br>
+  <a href="#"><img src="https://m.media-amazon.com/images/I/710UZpVTAHL._AC_SY145_.jpg"></a>
+  <a href="#"><img src="https://m.media-amazon.com/images/I/61dtCfEcB+L._AC_SY145_.jpg"></a>
+</div>
+
+<div class="ad">
+  <h6>Minimum 50% off | Indoor plants</h6>
+  <a href="#"><img src="https://m.media-amazon.com/images/I/616m2ss+3sS._AC_SY200_.jpg"></a>
+  <a href="#"><img src="https://m.media-amazon.com/images/I/817pQoTjKHL._AC_SY200_.jpg"></a><br><br>
+  <a href="#"><img src="https://m.media-amazon.com/images/I/715bHZX90ML._AC_SY200_.jpg"></a>
+  <a href="#"><img src="https://m.media-amazon.com/images/I/71Eugcj1NFL._AC_SY200_.jpg"></a>
+</div>
+</div>
+
+  <br><br>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="b">
+    <div class="container">
+        <section class="about-us">
+            <h2>About Us</h2>
+            <p>Welcome to our website. We are dedicated to providing the best service.&nbsp;&nbsp;<a href="https://en.wikipedia.org/wiki/EBay">read more</a></a></p>
+        </section>
+
+        <section class="about-us">
+          <h2>Connect with Us</h2>
+          <a href="https://www.instagram.com/ebay/">Instagram</a><br>
+          <a href="https://www.facebook.com/ebay/">Facebook</a><br>
+          <a href="https://x.com/eBay">X (Twitter)</a><br>
+      </section>
+
+        <section class="contact-us">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out to us.</p>
+            <form id="feedback-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+    </div>
+    <div class="cc">
+            <p>Terms of use  Privacy Policy License &copy; 2024 ebay . All rights reserved.</p>
+    </div>
+</div>
+  <script>
+    const scrollWrapper = document.querySelector('.scrolling-wrapper');
+    const scrollLeftBtn = document.getElementById('scroll-left');
+    const scrollRightBtn = document.getElementById('scroll-right');
+
+    scrollLeftBtn.addEventListener('click', () => {
+      scrollWrapper.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+
+    scrollRightBtn.addEventListener('click', () => {
+      scrollWrapper.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const scrollLeftButton = document.getElementById('scrollLeft');
+      const scrollRightButton = document.getElementById('scrollRight');
+      const imageBar = document.getElementById('iB');
+
+      const scrollAmount = 300;
+
+      scrollLeftButton.addEventListener('click', () => {
+        imageBar.scrollBy({
+          left: -scrollAmount,
+          behavior: 'smooth'
         });
-    </script>
-  </body>
+      });
+
+      scrollRightButton.addEventListener('click', () => {
+        imageBar.scrollBy({
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2K8uLIdmPqQ8fTRWJ7xEoCeaFMW9lCAyno6sNOQ1MYmykL7kNs1qG8lnXz" crossorigin="anonymous"></script>
+</body>
 </html>
